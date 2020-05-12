@@ -6,7 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 10f;
     private Rigidbody rb;
-
+    public Vector2 movement;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,19 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        movement = new Vector2(-bulletSpeed, 0);
+
+        if(transform.position.x < -50f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    private void FixedUpdate()
+    {
+        moveCharacter(movement);
+    }
+    void moveCharacter(Vector2 direction)
+    {
+        rb.MovePosition((Vector2)transform.position + (direction * bulletSpeed * Time.deltaTime));
     }
 }
