@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector2(Input.GetAxis("Horizontal"), (Input.GetAxis("Vertical")));
+        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
     private void FixedUpdate()
     {
@@ -25,9 +25,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        if(Input.GetKey("w"))
-        {
-            rb.AddForce(direction * speed);
-        }
+        rb.AddForce(direction * speed);      
     }
 }

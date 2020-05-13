@@ -19,7 +19,7 @@ public class DeployBullets : MonoBehaviour
     private void spawnEnemy()
     {
         GameObject a = Instantiate(bulletPrefab) as GameObject;
-        a.transform.position = new Vector3(15, Random.Range(1, 10), -2);
+        a.transform.position = new Vector3(15, Random.Range(1.57f, 9.42f), -2);
     }
     IEnumerator asteroidWave()
     {
