@@ -610,6 +610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: miniCanon (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7900076
@@ -820,6 +824,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1473245931623014953, guid: 203ccd316e0b8904fbb2aed8da676d67,
     type: 3}
   respawnTime: 1
+  xPos: 0
+  zPos: 0
 --- !u!4 &427018555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d,
@@ -941,6 +947,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
   respawnTime: 1
+  xPos: 0
+  zPos: 0
 --- !u!4 &543700541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d,
@@ -1052,6 +1060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: miniCanon
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.079992
@@ -1134,6 +1146,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1174425003}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &703147326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 703147327}
+  - component: {fileID: 703147328}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &703147327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703147326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.37, y: -3.9504356, z: 10.324276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &703147328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703147326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35cba13ab0491549885f1b2041f9610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1473245931623014953, guid: 203ccd316e0b8904fbb2aed8da676d67,
+    type: 3}
+  respawnTime: 1
+  xPos: 0
+  zPos: 0
 --- !u!1 &769617042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,26 +1940,6 @@ Transform:
   m_Father: {fileID: 2013476262}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1091035701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d,
-    type: 3}
-  m_PrefabInstance: {fileID: 565662356}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1091035703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091035701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35cba13ab0491549885f1b2041f9610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  respawnTime: 1
 --- !u!4 &1160234001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d,
@@ -1916,6 +1956,10 @@ PrefabInstance:
     - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_Name
       value: miniCanon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2157,9 +2201,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 364759367}
     m_Modifications:
+    - target: {fileID: 100000, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_Name
       value: miniCanon (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2241,6 +2297,10 @@ PrefabInstance:
     - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_Name
       value: miniCanon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2417,6 +2477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: miniCanon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.079992
@@ -2494,9 +2558,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 364759367}
     m_Modifications:
+    - target: {fileID: 100000, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_Name
       value: miniCanon (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2730,6 +2806,29 @@ Transform:
   m_Father: {fileID: 2013476262}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1345657685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 233284165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1345657687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345657685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35cba13ab0491549885f1b2041f9610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1473245931623014953, guid: 203ccd316e0b8904fbb2aed8da676d67,
+    type: 3}
+  respawnTime: 1
+  xPos: 0
+  zPos: 0
 --- !u!4 &1353389138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d,
@@ -2918,9 +3017,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 364759367}
     m_Modifications:
+    - target: {fileID: 100000, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_Name
       value: miniCanon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7953174529d127f40a701454f41dde0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3328,7 +3439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2007390053
 Transform:
   m_ObjectHideFlags: 0
