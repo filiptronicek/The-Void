@@ -6,21 +6,21 @@ public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 10f;
     private Rigidbody rb;
-    public Vector2 movement;
+    public Vector3 movement;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        rb.velocity = new Vector2(-bulletSpeed, 0);
+        rb.velocity = new Vector3(-bulletSpeed, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector2(-bulletSpeed, 0);
+        movement = new Vector3(-bulletSpeed, 0);
 
-        if(transform.position.x < -50f)
+        if(transform.position.x < -10f)
         {
             Destroy(this.gameObject);
         }
@@ -29,8 +29,8 @@ public class Bullet : MonoBehaviour
     {
         moveCharacter(movement);
     }
-    void moveCharacter(Vector2 direction)
+    void moveCharacter(Vector3 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * bulletSpeed * Time.deltaTime));
+        rb.MovePosition((Vector3)transform.position + (direction * bulletSpeed * Time.deltaTime));
     }
 }
