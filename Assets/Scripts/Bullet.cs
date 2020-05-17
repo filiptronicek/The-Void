@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(-bulletSpeed, 0);
+        moveCharacter(movement);
     }
 
     // Update is called once per frame
