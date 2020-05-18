@@ -10,7 +10,7 @@ using UnityEngine;
 public class ParticleCollision : MonoBehaviour
 {
     private List<ParticleCollisionEvent> m_CollisionEvents = new List<ParticleCollisionEvent>();
-    private ParticleSystem m_ParticleSystem;
+    public ParticleSystem m_ParticleSystem;
 
 
     private void Start()
@@ -21,14 +21,18 @@ public class ParticleCollision : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        int numCollisionEvents = m_ParticleSystem.GetCollisionEvents(other, m_CollisionEvents);
-        for (int i = 0; i < numCollisionEvents; ++i)
+        if (other.gameObject.tag == "Bullet")
         {
-            var col = m_CollisionEvents[i].colliderComponent;
+            int numCollisionEvents = m_ParticleSystem.GetCollisionEvents(other, m_CollisionEvents);
+            for (int i = 0; i < numCollisionEvents; ++i)
+            {
+                var col = m_CollisionEvents[i].colliderComponent;
 
-            var fire = col.GetComponent<ExtinguishableFire>();
-            if (fire != null)
-                fire.Extinguish();
+                var fire = col.GetComponent<ExtinguishableFire>();
+                if (fire != null)
+                    fire.Extinguish();
+            }
         }
+        
     }
 }

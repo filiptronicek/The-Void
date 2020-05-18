@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class PlayerCollision : MonoBehaviour
 {
     public PlayerMovement movement;
-    public float delay = 2f;
+    public float delay = 1f;
     float countdown;
     bool Collided = false;
     public ParticleSystem particlePrefab = null;
@@ -21,7 +21,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (Collided)
         {
-            
+            particlePrefab.Play(true);
 
             movement.enabled = false;
             countdown -= Time.deltaTime;
@@ -36,8 +36,13 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.collider.tag == "Bullet")
         {
+            
             Collided = true;
-                      
+            Destroy();         
         }
+    }
+    public void Destroy()
+    {
+        Instantiate(particlePrefab, transform.position, Quaternion.identity);
     }
 }

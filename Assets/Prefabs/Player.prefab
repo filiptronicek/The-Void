@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 6487697881831490868}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,5 +605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 6487697881831490890}
-  delay: 3
-  particlePrefab: {fileID: 0}
+  delay: 1
+  particlePrefab: {fileID: 198000012942003240, guid: ecdd96beb7f93494880c052dfccf9dc1,
+    type: 3}
