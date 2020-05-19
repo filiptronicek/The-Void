@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public GameObject replacement;
+    
     public PlayerMovement movement;
     public float delay = 1f;
     float countdown;
     bool Collided = false;
     public ParticleSystem particlePrefab = null;
+
 
     private void Start()
     {
@@ -21,14 +25,12 @@ public class PlayerCollision : MonoBehaviour
     {
         if (Collided)
         {
-            particlePrefab.Play(true);
+            GameObject.Instantiate(replacement, transform.position, transform.rotation);
+
+            Destroy(gameObject);
 
             movement.enabled = false;
-            countdown -= Time.deltaTime;
-            if (countdown <= 0f)
-            {
-                SceneManager.LoadScene("SampleScene");               
-            }
+            
             
         }
     }
@@ -37,11 +39,17 @@ public class PlayerCollision : MonoBehaviour
         if (collision.collider.tag == "Bullet")
         {
             
+            
+            
+
             Collided = true;
-            Destroy();         
+
+            Explosion();            
         }
+
+        
     }
-    public void Destroy()
+    public void Explosion()
     {
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
     }
