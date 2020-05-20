@@ -18,7 +18,7 @@ public class Shattered : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Collided)
+       /* if (Collided)
         {
             countdown -= Time.deltaTime;
             if (countdown <= 0f)
@@ -34,6 +34,6 @@ public class Shattered : MonoBehaviour
         {
             Collided = true;           
         }
-    }
+   */ }
 }
 

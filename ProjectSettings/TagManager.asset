@@ -15,6 +15,7 @@ TagManager:
   - PlayerRay
   - Rocket
   - Bullet
+  - Floor
   layers:
   - Default
   - TransparentFX

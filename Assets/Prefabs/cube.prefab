@@ -590,6 +590,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replacement: {fileID: 964005744668232948, guid: fb9181966752e774baefb901b775b247,
     type: 3}
+  deathMenu: {fileID: 0}
+  Score: {fileID: 0}
+  HighScore: {fileID: 0}
   movement: {fileID: 7963119854232667883}
   delay: 3
   particlePrefab: {fileID: 8243608619931714585, guid: d21015ca62042104a8a4d398ef8a3c9b,
