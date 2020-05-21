@@ -18,4 +18,9 @@ public class SocialMedia : MonoBehaviour
     {
         Application.OpenURL("https://www.buymeacoffee.com/svobodavl");
     }
+
+    public void Github()
+    {
+        Application.OpenURL("https://github.com/svobodavl");
+    }
 }
