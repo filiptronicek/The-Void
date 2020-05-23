@@ -3098,8 +3098,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
   respawnTime: 1
-  xPos: 0
-  zPos: 0
 --- !u!1 &552166740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,8 +3311,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1795125186474606334, guid: 05f147128ebddd947910c20b49d3ef51,
     type: 3}
   respawnTime: 1
-  xPos: 0
-  zPos: 0
 --- !u!1 &769617042
 GameObject:
   m_ObjectHideFlags: 0
