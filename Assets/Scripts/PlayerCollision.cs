@@ -18,6 +18,7 @@ public class PlayerCollision : MonoBehaviour
     float countdown;
     bool Collided = false;
     public ParticleSystem particlePrefab = null;
+    bool Particle = false;
 
 
     private void Start()
@@ -36,23 +37,20 @@ public class PlayerCollision : MonoBehaviour
             deathMenu.SetActive(true);
             Score.SetActive(false);
 
-            
+            Particle = true;
             HighScore.text = PlayerPrefs.GetInt("highScore") + "";
+        }
+
+        if (Particle)
+        {
+            Instantiate(particlePrefab, transform.position, Quaternion.identity);
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Bullet")
         {
-            Collided = true;
-
-            Explosion();            
-        }
-
-        
-    }
-    public void Explosion()
-    {
-        Instantiate(particlePrefab, transform.position, Quaternion.identity);
-    }
+            Collided = true;                      
+        }        
+    }    
 }
