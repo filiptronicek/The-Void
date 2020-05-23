@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DeployBullets : MonoBehaviour
 {
     public GameObject bulletPrefab;
+
     public float respawnTime = 1.0f;
     private Vector2 screenBounds;
-    public int xPos;
-    public int zPos;
 
-    // Use this for initialization
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
@@ -27,6 +26,9 @@ public class DeployBullets : MonoBehaviour
         {
             yield return new WaitForSeconds(respawnTime);
             spawnEnemy();
+            
+           
         }
+        
     }
 }

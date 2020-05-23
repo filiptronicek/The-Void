@@ -20,6 +20,6 @@ public class score : MonoBehaviour
         {
             PlayerPrefs.SetInt("highScore", (int)scoreAmount);
             PlayerPrefs.Save();
-        }               
+        }
     }
 }

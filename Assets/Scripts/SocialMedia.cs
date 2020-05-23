@@ -23,4 +23,9 @@ public class SocialMedia : MonoBehaviour
     {
         Application.OpenURL("https://github.com/svobodavl");
     }
+
+    public void Facebook()
+    {
+        Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    }
 }
